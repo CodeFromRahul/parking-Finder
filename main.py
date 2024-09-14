@@ -8,9 +8,12 @@ import  pickle
 
 # pickle is used to save all theempy position and bring it to the same code
 
-img = cv2.imread("img.png")
 
-width,height =107,48
+width,height =135,60
+
+
+
+
 
 try:
     with open('CarParkPos', 'rb') as f:
@@ -34,6 +37,7 @@ def mouseClick(events,x,y,flags,params):
 
 
 while True:
+    img = cv2.imread("img_1.png")
 
     for pos in posList:
         cv2.rectangle(img,pos,(pos[0]+width,pos[1]+height),(255,0,255),2)
